@@ -384,41 +384,41 @@ protected:
 	void SetMovementModel();
 
 	/** Input */
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void PlayerForwardMovementInput(float Value);
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void PlayerRightMovementInput(float Value);
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void PlayerCameraUpInput(float Value);
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void PlayerCameraRightInput(float Value);
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void JumpPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void JumpReleasedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void SprintPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void SprintReleasedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void AimPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void AimReleasedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void CameraPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void CameraReleasedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void OnSwitchCameraMode();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void StancePressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void WalkPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void RagdollPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void VelocityDirectionPressedAction();
-
+	UFUNCTION(BlueprintCallable, Category = "ALS|Essential Information")
 	void LookingDirectionPressedAction();
 
 	/** Replication */

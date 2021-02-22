@@ -377,7 +377,7 @@ void UALSCharacterAnimInstance::SetPelvisIKOffset(float DeltaSeconds, FVector Fo
 
 		// Step 2: Interp the Current Pelvis Offset to the new target value.
 		//Interpolate at different speeds based on whether the new target is above or below the current one.
-		const float InterpSpeed = PelvisTarget.Z > FootIKValues.PelvisOffset.Z ? 10.0f : 15.0f;
+		const float InterpSpeed = PelvisTarget.Z > FootIKValues.PelvisOffset.Z ? Config.PelvisOffset_UpInterpSpeed : Config.PelvisOffset_DownInterpSpeed;
 		FootIKValues.PelvisOffset =
 			FMath::VInterpTo(FootIKValues.PelvisOffset, PelvisTarget, DeltaSeconds, InterpSpeed);
 	}
@@ -449,7 +449,7 @@ void UALSCharacterAnimInstance::SetFootOffsets(float DeltaSeconds, FName EnableF
 
 	// Step 2: Interp the Current Location Offset to the new target value.
 	// Interpolate at different speeds based on whether the new target is above or below the current one.
-	const float InterpSpeed = CurLocationOffset.Z > CurLocationTarget.Z ? 30.f : 15.0f;
+	const float InterpSpeed = CurLocationOffset.Z > CurLocationTarget.Z ? Config.FootIK_DownInterpSpeed : Config.FootIK_UpInterpSpeed;
 	CurLocationOffset = FMath::VInterpTo(CurLocationOffset, CurLocationTarget, DeltaSeconds, InterpSpeed);
 
 	// Step 3: Interp the Current Rotation Offset to the new target value.

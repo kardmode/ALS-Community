@@ -321,6 +321,24 @@ private:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	bool Barrel_ = false;
 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+		bool RifleNoGrip_ = false;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+		bool OneHandedItem_ = false;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+		bool TwoHandedItem_ = false;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+		bool OneHandedMelee_ = false;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+		bool TwoHandedMelee_ = false;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+		bool Fighter_ = false;	
+
 public:
 	FALSOverlayState()
 	{
@@ -342,6 +360,16 @@ public:
 	FORCEINLINE const bool& Box() const { return Box_; }
 	FORCEINLINE const bool& Barrel() const { return Barrel_; }
 
+
+	
+
+	FORCEINLINE const bool& RifleNoGrip() const { return RifleNoGrip_; }
+	FORCEINLINE const bool& OneHandedItem() const { return OneHandedItem_; }
+	FORCEINLINE const bool& TwoHandedItem() const { return TwoHandedItem_; }
+	FORCEINLINE const bool& OneHandedMelee() const { return OneHandedMelee_; }
+	FORCEINLINE const bool& TwoHandedMelee() const { return TwoHandedMelee_; }
+	FORCEINLINE const bool& Fighter() const { return Fighter_; }
+
 	FORCEINLINE operator EALSOverlayState() const { return State; }
 
 	FORCEINLINE void operator=(const EALSOverlayState NewAction)
@@ -360,6 +388,14 @@ public:
 		Binoculars_ = State == EALSOverlayState::Binoculars;
 		Box_ = State == EALSOverlayState::Box;
 		Barrel_ = State == EALSOverlayState::Barrel;
+
+		RifleNoGrip_ = State == EALSOverlayState::RifleNoGrip;
+		OneHandedItem_ = State == EALSOverlayState::OneHandedItem;
+		TwoHandedItem_ = State == EALSOverlayState::TwoHandedItem;
+		OneHandedMelee_ = State == EALSOverlayState::OneHandedMelee;
+		TwoHandedMelee_ = State == EALSOverlayState::TwoHandedMelee;
+		Fighter_ = State == EALSOverlayState::Fighter;
+
 	}
 };
 

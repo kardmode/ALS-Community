@@ -41,7 +41,10 @@ enum class EALSMovementAction : uint8
 	LowMantle,
 	HighMantle,
 	Rolling,
-	GettingUp
+	GettingUp,
+	TakingDamage,
+	Dodging,
+	Melee
 };
 
 UENUM(BlueprintType)
@@ -69,7 +72,13 @@ enum class EALSOverlayState : uint8
 	Torch,
 	Binoculars,
 	Box,
-	Barrel
+	Barrel,
+	RifleNoGrip,
+	OneHandedItem,
+	TwoHandedItem,
+	OneHandedMelee,
+	TwoHandedMelee,
+	Fighter
 };
 
 UENUM(BlueprintType)

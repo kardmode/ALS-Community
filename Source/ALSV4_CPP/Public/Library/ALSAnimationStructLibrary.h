@@ -493,4 +493,18 @@ struct FALSAnimConfiguration
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float IK_TraceDistanceBelowFoot = 45.0f;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float FootIK_UpInterpSpeed = 15.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float FootIK_DownInterpSpeed = 30.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float PelvisOffset_UpInterpSpeed = 10.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float PelvisOffset_DownInterpSpeed = 15.0f;
+
 };
